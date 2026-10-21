@@ -26,7 +26,7 @@
       "Edit(~/.ssh/**)",
       "Edit(~/.zshrc)",
       "Edit(~/.bashrc)",
-      "Edit(//workspace/<環境project>/**)"
+      "Bash(echo:*)"
     ]
   },
   "sandbox": {
