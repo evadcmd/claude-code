@@ -1,0 +1,20 @@
+{
+    "name": "claude",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+    "workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspace,type=bind",
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localEnv:HOME}/.aws-claude-dev,target=/home/node/.aws,type=bind,readonly"
+    ],
+    "containerEnv": {
+        "AWS_PROFILE": "claude-dev"
+    },
+    "runArgs": [
+        "--network=claude-v6",
+        "--add-host=api.anthropic.com=[2607:6bc0::10]"
+    ],
+    "remoteUser": "node"
+}

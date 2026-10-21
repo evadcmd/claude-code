@@ -1,0 +1,53 @@
+{
+  "theme": "dark",
+  "permissions": {
+    "defaultMode": "default",
+    "disableBypassPermissionsMode": "disable",
+    "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.kube/**)",
+      "Read(~/.docker/config.json)",
+      "Read(~/.config/gh/**)",
+      "Read(~/.config/gcloud/**)",
+      "Read(~/.netrc)",
+      "Read(~/.npmrc)",
+      "Read(~/.pypirc)",
+      "Read(~/.git-credentials)",
+      "Read(~/.claude/.credentials.json)",
+      "Read(//**/.env)",
+      "Read(//**/.env.*)",
+      "Read(//**/*.pem)",
+      "Read(//**/*.key)",
+      "Read(//proc/**)",
+      "Edit(//**/.env)",
+      "Edit(//**/.env.*)",
+      "Edit(~/.ssh/**)",
+      "Edit(~/.zshrc)",
+      "Edit(~/.bashrc)",
+      "Edit(//workspace/<環境project>/**)"
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "allowUnsandboxedCommands": false,
+    "enableWeakerNestedSandbox": true,
+    "filesystem": {
+      "denyRead": [
+        "~/.ssh",
+        "~/.aws",
+        "~/.gnupg",
+        "~/.kube",
+        "~/.docker",
+        "~/.config/gh",
+        "~/.config/gcloud",
+        "~/.netrc",
+        "~/.npmrc",
+        "~/.pypirc",
+        "~/.git-credentials",
+        "~/Library/Keychains"
+      ]
+    }
+  }
+}

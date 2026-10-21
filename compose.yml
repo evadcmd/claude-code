@@ -1,0 +1,8 @@
+services:
+  claude:
+    build: .
+    volumes:
+      - ~/.aws-claude-dev:/home/node/.aws:ro
+      - .:/workspace
+    environment:
+      AWS_PROFILE: claude-dev
